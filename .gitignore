@@ -1,0 +1,31 @@
+# Ignorar el directorio de Vagrant
+.vagrant/
+
+# Ignorar archivos de configuración temporales y logs
+*.log
+*.tmp
+*.bak
+
+# Ignorar archivos de máquina virtual generados por Vagrant
+*.box
+*.img
+*.vdi
+*.vmdk
+*.vagrantfile
+*.ova
+*.ovf
+
+# Ignorar claves SSH generadas por Vagrant
+*.private
+
+# Ignorar archivos de redirección de salida
+*.stdout
+*.stderr
+
+# Ignorar archivos de personalización de entornos
+.env
+.env.local
+
+# Ignorar otros archivos innecesarios para el repositorio
+.DS_Store
+Thumbs.db
