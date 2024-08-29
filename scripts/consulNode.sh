@@ -30,10 +30,17 @@ rm -rf *.* consulService
 git clone https://github.com/omondragon/consulService
 cd consulService/app
 sed -i "s/const HOST='192.168.100.3'/const HOST='$LOCAL_IP'/g" index.js
+sed -i "s/data_host: HOST/data_host: HOST,\n hostname: '$NODE_NAME'/g" index.js
 
 npm install consul express
 node index.js $(shuf -i 3000-3999 -n 1) &
 # node index.js 3000 &
 # node index.js 3001 &
 
-echo "Consul servidor iniciado en segundo plano "
+echo <<EOF "
+*****************************************************************************
+***
+*** Configuración del nodo finalizada [$NODE_NAME]
+***
+*****************************************************************************"
+EOF
