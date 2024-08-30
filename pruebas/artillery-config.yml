@@ -1,0 +1,11 @@
+config:
+  target: "http://192.168.100.4"
+  phases:
+    - duration: 60
+      arrivalRate: 10
+scenarios:
+  - flow:
+      - get:
+          url: "/"
+          headers:
+            Content-Type: "application/json"
